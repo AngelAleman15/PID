@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Initiation Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #aaa;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #1f4e79;
+      color: white;
+    }
+
+    h2 {
+      background: #1f4e79;
+      color: white;
+      padding: 10px;
+    }
+
+    textarea, input, select {
+      width: 100%;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      background: #1f4e79;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://formspree.io/f/tu_id_aqui" method="POST">
+    <h2>Project Initiation Document</h2>
+    <table>
+    <tr>
+        <th>Client</th>
+        <th>Client lead</th>
+        <th>Proyect manager</th>
+        <th>Version</th>
+    </tr>
+    <tr>
+        <td><input type="text" name="client" required></td>
+        <td><input type="text" name="client_lead" required></td>
+        <td><input type="text" name="proyect_manager" required></td>
+        <td><input type="text" name="version" required></td>
+    </tr>
+    <tr>
+        <th>Proyect Name</th>
+        <th>Proyect Code</th>
+        <th>Deadline</th>
+        <th>Proposed Budget</th>
+    </tr>
+    <tr>
+        <td><input type="text" name="proyect_name" required></td>
+        <td><input type="text" name="proyect_code" required></td>
+        <td><input type="date" name="deadline" required ><input type="date" name="deadline" required></td>
+        <td><input type="text" name="date" required></td>
+    </tr>
+    </table>
+
+    <h2>The Context</h2>
+    <textarea name="context" rows="4" required placeholder="Describe the context here..."></textarea>
+
+    <h2>Project Parameters</h2>
+    <table>
+      <tr>
+        <th>Scope</th>
+        <th>Location</th>
+        <th>Constraints</th>
+      </tr>
+      <tr>
+        <td><input type="text" name="scope"></td>
+        <td><input type="text" name="location"></td>
+        <td><input type="text" name="constraints"></td>
+      </tr>
+    </table>
+
+    <h2>Project Specifics</h2>
+    <table>
+      <tr>
+        <th>Must work on</th>
+        <th>Platform</th>
+        <th>Languages</th>
+      </tr>
+      <tr>
+        <td>
+          <label><input type="checkbox" name="platforms[]" value="Android"> Android</label><br>
+          <label><input type="checkbox" name="platforms[]" value="iOS"> iOS</label><br>
+          <label><input type="checkbox" name="platforms[]" value="Web"> Web</label>
+        </td>
+        <td>
+          <select name="deployment">
+            <option value="Local">Local</option>
+            <option value="Cloud">Cloud</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </td>
+        <td>
+          <label><input type="checkbox" name="languages[]" value="Java"> Java</label><br>
+          <label><input type="checkbox" name="languages[]" value="Python"> Python</label><br>
+          <label><input type="checkbox" name="languages[]" value="JavaScript"> JavaScript</label>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Project Breakdown</h2>
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Task Name</th>
+        <th>Responsible</th>
+        <th>Start</th>
+        <th>End</th>
+      </tr>
+      <!-- Puedes duplicar estas filas para más tareas -->
+      <tr>
+        <td>1</td>
+        <td><input type="text" name="task_1"></td>
+        <td><input type="text" name="resp_1"></td>
+        <td><input type="date" name="start_1"></td>
+        <td><input type="date" name="end_1"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="text" name="task_2"></td>
+        <td><input type="text" name="resp_2"></td>
+        <td><input type="date" name="start_2"></td>
+        <td><input type="date" name="end_2"></td>
+      </tr>
+    </table>
+
+    <button type="submit" class="submit-btn">Enviar Proyecto</button>
+  </form>
+
+</body>
+</html>
